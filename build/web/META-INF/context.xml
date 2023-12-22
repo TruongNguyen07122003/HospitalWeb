@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/Hospital System">
+    <Resource
+        name="Hospital System" type="javax.sql.DataSource" auth="Container"
+        driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+        url="jdbc:sqlserver://localhost:1433;databaseName=HospitalWeb;instanceName=DESKTOP-VE4BH9T"
+        username="sa" password="12345"
+    />
+ </Context>
