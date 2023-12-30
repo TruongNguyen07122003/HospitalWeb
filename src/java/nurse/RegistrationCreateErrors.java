@@ -1,41 +1,36 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package nurse;
 
 import java.io.Serializable;
 
 /**
- *
- * @author GIGABYTE
+ * Represents errors that can occur during nurse registration.
  */
-public class RegistrationCreateErrors implements Serializable{
-    private String userIDLengthErr; 
+public class RegistrationCreateErrors implements Serializable {
+    private String userIDLengthErr;
     private String fullNameLengthErr;
-    private int ageLengthErr;
+    private String ageLengthErr;  // Changed type to String
     private String addressLengthErr;
     private String phoneLengthErr;
     private String staffIDErr;
     private String departmentLengthErr;
-    private String ShiftErr;
-    private double salaryErr;
-    private String passworrdLengthErr;
+    private String shiftErr;  // Changed from ShiftErr to shiftErr for consistency
+    private String salaryErr;  // Changed type to String
+    private String passwordLengthErr;  // Corrected typo in variable name
     private String confirmLengthErr;
+    private String userIDIsExisted;
 
-    public RegistrationCreateErrors(String userIDLengthErr, String fullNameLengthErr, int ageLengthErr, String addressLengthErr, String phoneLengthErr, String staffIDErr, String departmentLengthErr, String ShiftErr, double salaryErr, String passworrdLengthErr, String confirmLengthErr) {
-        this.userIDLengthErr = userIDLengthErr;
-        this.fullNameLengthErr = fullNameLengthErr;
-        this.ageLengthErr = ageLengthErr;
-        this.addressLengthErr = addressLengthErr;
-        this.phoneLengthErr = phoneLengthErr;
-        this.staffIDErr = staffIDErr;
-        this.departmentLengthErr = departmentLengthErr;
-        this.ShiftErr = ShiftErr;
-        this.salaryErr = salaryErr;
-        this.passworrdLengthErr = passworrdLengthErr;
-        this.confirmLengthErr = confirmLengthErr;
+    // Removed the unsupported constructor
+
+    public RegistrationCreateErrors() {
+        // Default constructor
+    }
+
+    public String getUserIDIsExisted() {
+        return userIDIsExisted;
+    }
+
+    public void setUserIDIsExisted(String userIDIsExisted) {
+        this.userIDIsExisted = userIDIsExisted;
     }
 
     public String getUserIDLengthErr() {
@@ -54,11 +49,11 @@ public class RegistrationCreateErrors implements Serializable{
         this.fullNameLengthErr = fullNameLengthErr;
     }
 
-    public int getAgeLengthErr() {
+    public String getAgeLengthErr() {
         return ageLengthErr;
     }
 
-    public void setAgeLengthErr(int ageLengthErr) {
+    public void setAgeLengthErr(String ageLengthErr) {
         this.ageLengthErr = ageLengthErr;
     }
 
@@ -95,27 +90,27 @@ public class RegistrationCreateErrors implements Serializable{
     }
 
     public String getShiftErr() {
-        return ShiftErr;
+        return shiftErr;
     }
 
-    public void setShiftErr(String ShiftErr) {
-        this.ShiftErr = ShiftErr;
+    public void setShiftErr(String shiftErr) {
+        this.shiftErr = shiftErr;
     }
 
-    public double getSalaryErr() {
+    public String getSalaryErr() {
         return salaryErr;
     }
 
-    public void setSalaryErr(double salaryErr) {
+    public void setSalaryErr(String salaryErr) {
         this.salaryErr = salaryErr;
     }
 
-    public String getPassworrdLengthErr() {
-        return passworrdLengthErr;
+    public String getPasswordLengthErr() {
+        return passwordLengthErr;
     }
 
-    public void setPassworrdLengthErr(String passworrdLengthErr) {
-        this.passworrdLengthErr = passworrdLengthErr;
+    public void setPasswordLengthErr(String passwordLengthErr) {
+        this.passwordLengthErr = passwordLengthErr;
     }
 
     public String getConfirmLengthErr() {
@@ -125,5 +120,4 @@ public class RegistrationCreateErrors implements Serializable{
     public void setConfirmLengthErr(String confirmLengthErr) {
         this.confirmLengthErr = confirmLengthErr;
     }
-
 }

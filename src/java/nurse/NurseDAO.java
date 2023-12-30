@@ -89,7 +89,7 @@ public class NurseDAO  implements Serializable{
             con = DBHelper.createConnection();
             if (con != null) {
                 //2.Create SQL String
-                String sql = "SELECT id, name, age, gender, address, phone, staffID, department, shift, salary "
+                String sql = "SELECT id, name, age, gender, address, phone, staffID, department, shift,password, salary "
                         + "FROM Nurse "
                         + "WHERE name Like ?";
                 //3.Create StatementObject
@@ -230,7 +230,7 @@ public class NurseDAO  implements Serializable{
     }
     
 
-    public boolean updateAccount(String staffID, boolean isAdmin, int id, String name, int age, String gender, String address, String phone, String department, String shift, double salary, String password)
+    public boolean updateAccount( int id,  int age, double salary, String name, String gender, String address, String phone, String department, String staffID, String shift,  String password)
         throws SQLException, NamingException, ClassNotFoundException {
         Connection con = null;
         PreparedStatement stm = null;
@@ -247,7 +247,6 @@ public class NurseDAO  implements Serializable{
                         + "gender = ?, "
                         + "address = ?, "
                         + "phone = ?, "
-                        + "isAdmin = ?, "
                         + "department = ?, "
                         + "shift = ?, "
                         + "salary = ?, "
@@ -261,12 +260,13 @@ public class NurseDAO  implements Serializable{
                 stm.setString(4, gender);
                 stm.setString(5, address);
                 stm.setString(6, phone);
-                stm.setBoolean(7, isAdmin);
-                stm.setString(8, department);
-                stm.setString(9, shift);
-                stm.setDouble(10, salary);
-                stm.setString(11, password);
-                stm.setString(12, staffID);
+              
+                stm.setString(7, department);
+                stm.setString(8, shift);
+                stm.setDouble(9, salary);
+                stm.setString(10, password);
+                stm.setString(11, staffID);
+                
 
                 //4. Execute Query
                 int effectiveRows = stm.executeUpdate();
@@ -299,9 +299,9 @@ public class NurseDAO  implements Serializable{
             if (con != null) {
                 //2. Create SQL String
                 String sql = "INSERT Into Nurse("
-                        +"id, name, age, gender, address, phone, staffID, department, shift, salary, password, isAdmin"
+                        +"id, name, age, gender, address, phone, staffID, department, shift, salary, password"
                         +") Values ("
-                        +"?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?"
+                        +"?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?"
                         +")";
                 //3. Create StatementObject
                 stm = con.prepareStatement(sql);
@@ -316,7 +316,7 @@ public class NurseDAO  implements Serializable{
                 stm.setString(9, account.getShift());
                 stm.setDouble(10, account.getSalary());
                 stm.setString(11, account.getPassword());
-                stm.setBoolean(12, account.getIsAdmin());
+     
                 
                 
                 
@@ -337,6 +337,10 @@ public class NurseDAO  implements Serializable{
             }
         }
         return result;
+    }
+
+    public boolean updateAccount(int id, String name, int age, String gender, String address, String phone, String department, String shift, double salary, String password) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
 //

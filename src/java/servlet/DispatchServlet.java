@@ -65,11 +65,14 @@ public class DispatchServlet extends HttpServlet {
             }if(button.equals("Delete")){
                 url=siteMaps.getProperty(MyApplicationConstants.DispatchFeature.DELETE_NURSE_CONTROLLER);
             }if(button.equals("Create New Nurse Account")){
-                url=siteMaps.getProperty(MyApplicationConstants.DispatchFeature.CREATE_ACCOUNT_CONTROLLER);
+                url=siteMaps.getProperty(MyApplicationConstants.DispatchFeature.CREATE_ACCOUNT_PAGE);
             }if(button.equals("Update")){
-                url=siteMaps.getProperty(MyApplicationConstants.DispatchFeature.UPDATE_PAGE);
+                url=siteMaps.getProperty(MyApplicationConstants.DispatchFeature.UPDATE_ACCOUNT_CONTROLLER);
+            }if(button.equals("Create Account")){
+                url=siteMaps.getProperty(MyApplicationConstants.DispatchFeature.CREATE_ACCOUNT_CONTROLLER);
+            } if (button.equals("Log Out")) {
+                url = siteMaps.getProperty(MyApplicationConstants.DispatchFeature.LOGOUT_CONTROLLER);
             }
-            
         }finally{
             RequestDispatcher rd = request.getRequestDispatcher(url);
             rd.forward(request, response);

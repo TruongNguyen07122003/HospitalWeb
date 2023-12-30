@@ -60,49 +60,51 @@
                                 <tr>
                                     <td>${counter.count}</td>
                                     <td>
-                                        ${dto.id}
-                                        <input type="hidden" name="updateId" value="${dto.id}" />
+                                        <input type="text" name="updateID" value="${dto.id}" />
+                                        
                                     </td>
                                     
                                     <td>
-                                        ${dto.name}
-                                        <input type="hidden" name="updateName" value="${dto.name}" />
+                                        <input type="text" name="updateName" value="${dto.name}" />
+                                        
                                     </td>
                                     <td>
-                                        ${dto.age}
-                                        <input type="hidden" name="updateAge" value="${dto.age}" />
+                                        <input type="text" name="updateAge" value="${dto.age}" />
+                                        
                                     </td>
                                     <td>
-                                        ${dto.gender}
-                                        <input type="hidden" name="updateGender" value="${dto.gender}" />
+                                        <input type="text" name="updateGender" value="${dto.gender}" />
+                                        
                                     </td>
                                     <td>
-                                        ${dto.address}
-                                        <input type="hidden" name="updateAddress" value="${dto.address}" />
+                                        <input type="text" name="updateAddress" value="${dto.address}" />
+                                        
                                     </td>
                                     <td>
-                                        ${dto.phone}
-                                        <input type="hidden" name="updatePhone" value="${dto.phone}" />
+                                        <input type="text" name="updatePhone" value="${dto.phone}" />
+                                        
                                     </td>
                                     <td>
                                         ${dto.staffID}
                                         <input type="hidden" name="updateStaffID" value="${dto.staffID}" />
                                     </td>
                                     <td>
-                                        ${dto.department}
-                                        <input type="hidden" name="updateDepartment" value="${dto.department}" />
+                                        
+                                        
+                                        <input type="text" name="updateDepartment" value="${dto.department}" />
                                     </td>
                                     <td>
-                                        ${dto.shift}
-                                        <input type="hidden" name="updateShift" value="${dto.shift}" />
+                                        
+                                        
+                                        <input type="text" name="updateShift" value="${dto.shift}" />
                                     </td>
                                     <td>
                                         <input type="password" name="txtPassword" value="${dto.password}" />
-                                        <input type="hidden" name="updatePassword" value="${dto.password}" />
+                                        <input type="hidden" name="txtPassword" value="${dto.password}" />
                                     </td>
                                     <td>
-                                        ${dto.salary}
-                                        <input type="hidden" name="updateSalary" value="${dto.salary}" />
+                                        
+                                        <input type="text" name="updateSalary" value="${dto.salary}"/>
                                     </td>
                                     <td>
                                         <a href="DispatchServlet?btAction=Delete&amp;pk=${dto.staffID}&amp;lastSearchValue=${searchValue}">Delete</a>
@@ -122,7 +124,13 @@
             <c:if test="${empty result}">
                 <h2>No record is matched!!!</h2>
             </c:if>
+               
         </c:when>
     </c:choose>
+                
+                
+                <form action="DispatchServlet">
+                    <input type="submit" value="Log Out" name="btAction" />
+                </form>
 </body>
 </html>

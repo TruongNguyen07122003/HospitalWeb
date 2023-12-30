@@ -35,22 +35,30 @@ public class LogOutServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         String url = LOGIN_PAGE;
-        try{
-            HttpSession session = request.getSession();
-            session.removeAttribute("USER_INFO");
+        try {
+            // Lấy phiên (session) hiện tại hoặc tạo mới nếu chưa tồn tại
+            HttpSession session = request.getSession(false);
 
-            // Lấy danh sách tất cả các cookie trong phiên
+            // Kiểm tra xem phiên có tồn tại hay không
+            if (session != null) {
+                // Xóa thông tin người dùng khỏi session
+                session.removeAttribute("STAFF_INFO");
+                // Hủy phiên (session)
+                session.invalidate();
+            }
+
+            // Lấy danh sách tất cả các cookie trong request
             Cookie[] cookies = request.getCookies();
 
             if (cookies != null) {
                 for (Cookie cookie : cookies) {
                     // Đặt thời gian sống của cookie thành 0 (ngay lập tức hết hạn)
                     cookie.setMaxAge(0);
-                    // Đặt lại cookie trên phía client (trình duyệt)
+                    // Đặt lại cookie trên phía client (trình duyệt) để xóa
                     response.addCookie(cookie);
                 }
             }
-        }finally{
+        } finally {
             response.sendRedirect(url);
         }
         

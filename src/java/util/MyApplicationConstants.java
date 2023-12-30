@@ -17,9 +17,12 @@ public class MyApplicationConstants {
         public static final String LOGIN_CONTROLLER = "loginController";
         public static final String SEARCH_LASTNAME_CONTROLLER = "searchController";
         public static final String DELETE_NURSE_CONTROLLER = "deleteAccountController";
-        public static final String UPDATE_NURSE_CONTROLLER = "updateAccountController";
-        public static final String CREATE_ACCOUNT_CONTROLLER = "createAccountController";
+        public static final String UPDATE_ACCOUNT_CONTROLLER = "updateAccountController";
         public static final String DISPLAY_ALL_CONTROLLER="DisplayAllController";
+        public static final String CREATE_ACCOUNT_PAGE="CreateAccountPage"; 
+        public static final String CREATE_ACCOUNT_CONTROLLER = "createAccountController";
+        public static final String LOGOUT_CONTROLLER = "logoutController";
+
     }
 
     public class LoginFeature {
