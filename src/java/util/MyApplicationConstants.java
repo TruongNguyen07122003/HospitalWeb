@@ -22,7 +22,8 @@ public class MyApplicationConstants {
         public static final String CREATE_ACCOUNT_PAGE="CreateAccountPage"; 
         public static final String CREATE_ACCOUNT_CONTROLLER = "createAccountController";
         public static final String LOGOUT_CONTROLLER = "logoutController";
-
+        public static final String SEARCH_PATIENT_CONTROLLER = "searchPatientController";
+        public static final String DISPLAY_ALL_PATIENT_CONTROLLER="displayAllPatientController";
     }
 
     public class LoginFeature {

@@ -7,14 +7,15 @@
             <file>file:/D:/Studying/PRJ/HospitalWeb/src/java/servlet/DisplayAllServlet.java</file>
             <file>file:/D:/Studying/PRJ/HospitalWeb/src/java/servlet/DeleteAccountServlet.java</file>
             <file>file:/D:/Studying/PRJ/HospitalWeb/web/index.html</file>
+            <file>file:/D:/Studying/PRJ/HospitalWeb/web/patientMenu.jsp</file>
             <file>file:/D:/Studying/PRJ/HospitalWeb/src/java/servlet/SearchLastNameServlet.java</file>
             <file>file:/D:/Studying/PRJ/HospitalWeb/src/java/servlet/UpdateAccountServlet.java</file>
+            <file>file:/D:/Studying/PRJ/HospitalWeb/src/java/servlet/SearchPatientServlet.java</file>
             <file>file:/D:/Studying/PRJ/HospitalWeb/web/META-INF/context.xml</file>
             <file>file:/D:/Studying/PRJ/HospitalWeb/web/WEB-INF/web.xml</file>
             <file>file:/D:/Studying/PRJ/HospitalWeb/src/java/servlet/DispatchServlet.java</file>
             <file>file:/D:/Studying/PRJ/HospitalWeb/web/search.jsp</file>
             <file>file:/D:/Studying/PRJ/HospitalWeb/web/createAccount.html</file>
-            <file>file:/D:/Studying/PRJ/HospitalWeb/web/patientMenu.html</file>
             <file>file:/D:/Studying/PRJ/HospitalWeb/src/java/nurse/NurseDAO.java</file>
             <file>file:/D:/Studying/PRJ/HospitalWeb/web/WEB-INF/siteMaps.properties</file>
             <file>file:/D:/Studying/PRJ/HospitalWeb/src/java/patient/PatientDAO.java</file>
@@ -25,6 +26,7 @@
             <file>file:/D:/Studying/PRJ/HospitalWeb/src/java/patient/PatientDTO.java</file>
             <file>file:/D:/Studying/PRJ/HospitalWeb/src/java/nurse/RegistrationCreateErrors.java</file>
             <file>file:/D:/Studying/PRJ/HospitalWeb/web/errors.html</file>
+            <file>file:/D:/Studying/PRJ/HospitalWeb/src/java/servlet/DisplayAllPatientServlet.java</file>
             <file>file:/D:/Studying/PRJ/HospitalWeb/src/java/servlet/LoginServlet.java</file>
             <file>file:/D:/Studying/PRJ/HospitalWeb/web/search.html</file>
             <file>file:/D:/Studying/PRJ/HospitalWeb/web/createAccount.jsp</file>

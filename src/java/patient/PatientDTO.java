@@ -1,33 +1,36 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package patient;
 
-/**
- *
- * @author GIGABYTE
- */
+import java.sql.Timestamp; // Import thư viện Timestamp
+
 public class PatientDTO {
     protected int id;
     protected String name;
     protected int age;
     protected String address;
+    protected String gender;
     protected String phone;
     protected String diagnosis;
-    protected String admissionDate;
-    protected String dischargeDate;
+    protected Timestamp admissionDate; // Sửa kiểu dữ liệu
+    protected Timestamp dischargeDate; // Sửa kiểu dữ liệu
 
-    public PatientDTO(int id, String name, int age, String address, String phone, String diagnosis, String admissionDate, String dischargeDate) {
+    public PatientDTO(int id, String name, int age, String address, String gender, String phone, String diagnosis, Timestamp admissionDate, Timestamp dischargeDate) {
         this.id = id;
         this.name = name;
         this.age = age;
         this.address = address;
+        this.gender = gender;
         this.phone = phone;
         this.diagnosis = diagnosis;
         this.admissionDate = admissionDate;
         this.dischargeDate = dischargeDate;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
     public int getId() {
@@ -78,20 +81,19 @@ public class PatientDTO {
         this.diagnosis = diagnosis;
     }
 
-    public String getAdmissionDate() {
+    public Timestamp getAdmissionDate() {
         return admissionDate;
     }
 
-    public void setAdmissionDate(String admissionDate) {
+    public void setAdmissionDate(Timestamp admissionDate) {
         this.admissionDate = admissionDate;
     }
 
-    public String getDischargeDate() {
+    public Timestamp getDischargeDate() {
         return dischargeDate;
     }
 
-    public void setDischargeDate(String dischargeDate) {
+    public void setDischargeDate(Timestamp dischargeDate) {
         this.dischargeDate = dischargeDate;
     }
-    
 }

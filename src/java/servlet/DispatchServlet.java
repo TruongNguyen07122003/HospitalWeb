@@ -72,6 +72,10 @@ public class DispatchServlet extends HttpServlet {
                 url=siteMaps.getProperty(MyApplicationConstants.DispatchFeature.CREATE_ACCOUNT_CONTROLLER);
             } if (button.equals("Log Out")) {
                 url = siteMaps.getProperty(MyApplicationConstants.DispatchFeature.LOGOUT_CONTROLLER);
+            }if (button.equals("SearchPatient")) {
+                url = siteMaps.getProperty(MyApplicationConstants.DispatchFeature.SEARCH_PATIENT_CONTROLLER);
+            }if (button.equals("Display All Patient")) {
+                url = siteMaps.getProperty(MyApplicationConstants.DispatchFeature.DISPLAY_ALL_PATIENT_CONTROLLER);
             }
         }finally{
             RequestDispatcher rd = request.getRequestDispatcher(url);
